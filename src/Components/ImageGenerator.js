@@ -40,8 +40,8 @@ const ImageGenerator = () => {
     // console.log('data:', data)
   }
   return (
-    <div class="bg-gray-900 text-center pt-16 mx-auto h-screen">
-      <h1 class="text-8xl font-bold tracking-tight text-white">
+    <div class="absolute bg-gray-900 text-center pt-16 mx-auto w-screen h-screen">
+      <h1 class="text-8xl font-bold tracking-tight text-white pb-16">
         image generator
       </h1>
       <div class="flex px-32 space-x-16 justify-center">
@@ -76,7 +76,7 @@ const ImageGenerator = () => {
         )}
         <div>
           <p class="mt-8 mb-2 text-md leading-8 text-gray-300">
-            input a prompt and click ‘enter’ to see your prompt come to life
+            input a prompt and click 'go' to see your prompt come to life
           </p>
           <div class="mb-6">
             <input
