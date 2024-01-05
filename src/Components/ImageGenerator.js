@@ -5,6 +5,11 @@ const ImageGenerator = () => {
   const [imageUrl, setImageUrl] = useState('/')
   let inputRef = useRef(null)
   const [loading, setLoading] = useState(false)
+  const [message, setMessage] = useState('')
+
+  const handleChange = (event) => {
+    setMessage(event.target.value)
+  }
 
   const generate = async () => {
     if (inputRef.current.value === '') {
@@ -86,16 +91,22 @@ const ImageGenerator = () => {
               placeholder='pink unicorn eating apple'
               class="text-wrap block w-full p-4 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-md focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             /> */}
-            <textarea
+            <input
               id="message"
               rows="4"
+              type="text"
               class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               placeholder="pink unicorn eating apple"
               ref={inputRef}
-            ></textarea>
+              onChange={handleChange}
+              value={message}
+            ></input>
           </div>
           <div class="flex content-center gap-x-8">
-            <button class="flex-auto rounded-md bg-transparent border border-indigo-500 border-2 px-3.5 py-2.5 text-sm font-semibold text-indigo-500 shadow-sm hover:border-indigo-400 hover:text-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">
+            <button
+              onClick={() => setMessage('')}
+              class="flex-auto rounded-md bg-transparent border border-indigo-500 border-2 px-3.5 py-2.5 text-sm font-semibold text-indigo-500 shadow-sm hover:border-indigo-400 hover:text-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
+            >
               clear
             </button>
             <button
