@@ -40,13 +40,13 @@ const ImageGenerator = () => {
     // console.log('data:', data)
   }
   return (
-    <div class="relative isolate bg-gray-900 text-center pt-16 h-screen mx-auto">
+    <div class="bg-gray-900 text-center pt-16 mx-auto h-screen">
       <h1 class="text-8xl font-bold tracking-tight text-white">
         image generator
       </h1>
       <div class="flex px-32 space-x-16 justify-center">
         {loading ? (
-          <div role="status" class="mt-10 grid place-items-center w-96">
+          <div role="status" class="mt-10 grid place-items-center w-96 h-96">
             <svg
               aria-hidden="true"
               class="w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-indigo-500"
@@ -79,18 +79,6 @@ const ImageGenerator = () => {
             input a prompt and click ‘enter’ to see your prompt come to life
           </p>
           <div class="mb-6">
-            {/* <label
-            for="large-input"
-            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-          >
-            Large input
-          </label> */}
-            {/* <input
-              type="text"
-              id="large-input"
-              placeholder='pink unicorn eating apple'
-              class="text-wrap block w-full p-4 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-md focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-            /> */}
             <input
               id="message"
               rows="4"

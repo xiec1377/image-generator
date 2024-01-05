@@ -1,3 +1,17 @@
+# Image Generator
+## Story
+I dabble in visual arts and sometimes I have trouble finding a reference photo that best suits my vision. 
+
+## Solution
+I tried playing with the open-source OpenAI API to create a React App that generates specific reference photos I might need for my work. I also tried out the Tailwind CSS library to play around with the beautiful preset component styles. This saved me a lot of time in terms of designing components!
+
+## Future
+- Store the history of generated images into a library that the user can view
+- Create a login workflow
+- Allow for the user to generate images given a chosen art style
+
+Try giving it a go!
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
